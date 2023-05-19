@@ -1,0 +1,86 @@
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+
+input {
+    padding: 18px;
+    width: 900px;
+    border: 1px solid transparent;
+    background-color: #3a3b3c;
+    font-size: 17px;
+    color: white;
+    border-radius: 12px 0px 0px 12px;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // width: 500px;
+}
+
+input:focus {
+    outline: none;
+    border: 1px solid #ffe259;
+}
+
+.btns {
+    margin-left: -100px;
+    border: none;
+    background-color: #ffe259;
+    padding: 19px 36px;
+    font-size: 17px;
+    border-radius: 0px 12px 12px 0px;
+    cursor: pointer;
+}
+
+body {
+    background-color: #18191a;
+}
+
+.intro {
+    // width: 500px;
+    margin: 10px auto;
+    color: white;
+    text-align: center;
+}
+
+.intro h1 {
+    font-size: 46px;
+    font-weight: 700;
+}
+
+.highlight {
+    background: radial-gradient(circle at center center, #9F6E3E 0%, #ffe259 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.intro p {
+    font-size: 20px;
+    color: rgb(185, 177, 162);
+}
+
+img {
+    width: 300px;
+}
+
+.loader {
+    margin: 0 auto;
+    border: 5px solid #f3f3f3;
+    /* Light grey */
+    border-top: 5px solid #ffe259;
+    /* Blue */
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
