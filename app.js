@@ -20,7 +20,7 @@ gen = () => {
     let img = document.getElementById('img');
     let getmoviename = document.getElementById('getmoviename');
     let apiwithmovie = api + getmoviename.value;
-    console.log(apiwithmovie);
+    // console.log(apiwithmovie);
     fetch(apiwithmovie)
         .then((response) => {
             return response.json();
@@ -31,6 +31,6 @@ gen = () => {
             h1.innerText = data.Title;
             p.innerText = data.Plot;
             img.src = data.Poster;
-            console.log(data);
+            // console.log(data);
         });
 }
