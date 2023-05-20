@@ -7,7 +7,7 @@ let loadingstatus = false;
     getintro.style.display = 'none';
     let getloader = document.getElementById('loader');
   
-    if (loadingstatus == true) {
+    if (loadingstatus==true) {
         getloader.classList.add('loader')
     }
     else {
