@@ -1,6 +1,6 @@
 let api = 'https://www.omdbapi.com/?i=tt3896198&apikey=c997e31e&t='
 let loadingstatus = false;
-function loader(){
+loader=()=>{
 
     let getintro = document.getElementById('intro');
     getintro.style.display = 'none';
@@ -14,7 +14,7 @@ else{
 }
   }
  
-function gen(){
+gen=()=>{
     loadingstatus = true;
     loader()
 
