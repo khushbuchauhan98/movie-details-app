@@ -24,15 +24,42 @@ gen=()=>{
     fetch(apiwithmovie).then((response)=>{
         return response.json()
       }).then((data)=>{
-        console.log(data)
-        loadingstatus = false;
-    loader()
-    let img=document.getElementById('img');
-    let h1= document.getElementById('h1');
-    let p= document.getElementById('p')
-    h1.innerText=data.Title;
-    p.innerText=data.Plot;
-    console.log(data);
-    img.src=data.Poster;
+        if(data.Error != "Movie not found!"){
+          console.log(data)
+          loadingstatus = false;
+      loader()
+      let img=document.getElementById('img');
+      img.src=data.Poster;
+      let h1= document.getElementById('h1');
+      h1.innerText=data.Title;
+      let p= document.getElementById('p')
+      p.innerText=data.Plot;
+      let year= document.getElementById('year')
+      year.innerText=data.Year;
+      let actors= document.getElementById('actors')
+      actors.innerText='Actors: '+ data.Actors;
+      let awards= document.getElementById('awards')
+      awards.innerText='Awards: '+ data.Awards;
+      let boxoffice= document.getElementById('boxoffice')
+      boxoffice.innerText='Collection: '+ data.BoxOffice;
+      let directors= document.getElementById('directors')
+      directors.innerText='Director: '+ data.Director;
+      console.log(data);
+      let detail= document.getElementById('detail');
+      detail.style.display='flex'
+      let error= document.getElementById('error');
+      error.style.display='none'
+        }
+        else{
+          let detail= document.getElementById('detail');
+          detail.style.display='none'
+          let error= document.getElementById('error');
+          error.classList.add('highlight');
+          error.style.display='block'
+          // alert('not found');
+          loadingstatus = false;
+          loader()
+        }
+      
       })
 }
