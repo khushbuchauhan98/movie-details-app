@@ -1,6 +1,6 @@
 let api = 'http://www.omdbapi.com/?i=tt3896198&apikey=61e576a4&t='
-let loadingstatus = false
-loader = () => {
+let loadingstatus = false;
+loader=()=> {
     let getloader = document.getElementById('loader')
     let getintro = document.getElementById('intro')
     getintro.style.display = 'none';
@@ -12,9 +12,9 @@ loader = () => {
     }
 
 }
-gen = () => {
-    loadingstatus = true
-    loader();
+gen=()=> {
+    loadingstatus = true;
+    loader()
    
     let getmoviename = document.getElementById('getmoviename');
     let apiwithmovie = api + getmoviename.value;
