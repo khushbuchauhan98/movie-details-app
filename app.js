@@ -14,7 +14,7 @@ loader = () => {
 }
 gen = () => {
     loadingstatus = true
-    loader();
+    loader()
    
     let getmoviename = document.getElementById('getmoviename');
     let apiwithmovie = api + getmoviename.value;
@@ -25,10 +25,10 @@ gen = () => {
         })
         .then((data) => {
             loadingstatus = false;
-            loader();
-            let h1 = document.getElementById('h1');
-            let p = document.getElementById('p');
-            let img = document.getElementById('img');
+            loader()
+             let h1 = document.getElementById('h1');
+    let p = document.getElementById('p');
+    let img = document.getElementById('img');
             h1.innerText = data.Title;
             p.innerText = data.Plot;
             img.src = data.Poster;
