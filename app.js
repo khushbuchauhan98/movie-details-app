@@ -47,7 +47,7 @@ gen=()=>{
       console.log(data);
       let detail= document.getElementById('detail');
       detail.style.display='flex';
-      // detail.style.justifyContent='space-evenly';
+      detail.style.justifyContent='space-evenly';
       let error= document.getElementById('error');
       error.style.display='none'
         }
