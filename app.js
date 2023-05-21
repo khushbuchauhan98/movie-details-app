@@ -46,7 +46,8 @@ gen=()=>{
       directors.innerText='Director: '+ data.Director;
       console.log(data);
       let detail= document.getElementById('detail');
-      detail.style.display='flex'
+      detail.style.display='flex';
+      // detail.style.justifyContent='space-evenly';
       let error= document.getElementById('error');
       error.style.display='none'
         }
